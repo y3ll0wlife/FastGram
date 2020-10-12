@@ -48,7 +48,8 @@ function addUser() {
 }
 
 function updateCurrent() {
-  let current = "Currently watching: " + accounts;
+  let users = [...new Set(accounts)];
+  let current = "Currently watching: " + users;
   document.getElementById("currentUsers").innerHTML = current;
 }
 
